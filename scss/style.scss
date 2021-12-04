@@ -37,6 +37,7 @@ nav ul {
 nav li {
   display: inline-block;
   flex-grow: 1;
+  text-align: center;
 }
 
 .avatar {
@@ -46,4 +47,16 @@ nav li {
 
 h1, h2 {
   font-size: 1rem;
+}
+
+section {
+  border-bottom: 1px solid $midgrey;
+}
+
+.id-badge {
+  border-left: 1px solid $darkgrey;
+}
+
+section:last-child {
+  border: none;
 }
