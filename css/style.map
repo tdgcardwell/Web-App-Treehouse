@@ -6,9 +6,9 @@
 		"../scss/_variables.scss"
 	],
 	"sourcesContent": [
-		"@import \"https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css\",\n        \"variables\";\n\nbody {\n  background-color: $color1;\n}\n",
-		"// colors\n$color1 : purple;\n"
+		"@import \"https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css\",\n        \"variables\";\n\nbody {\n  background-color: #fff;\n  color: #000;\n}\n\nheader,\nnav {\n  background-color: $color1;\n  color: #fff;\n}\n\nnav {\n  background-color: $color2;\n}\n",
+		"// colors\n$color1 : #7577bf;\n$color2 : #4d4c72;\n$color3 : #81c98f;\n$color4 : #58b6c8;\n\n$lightgrey : #f7f7f7;\n$midgrey: #cccccc;\n$darkgrey: #999a9a;\n\n$notify: #90ee90;\n"
 	],
 	"names": [],
-	"mappings": "AAAA,OAAO,CAAP,0EAAO;;AAGP,AAAA,IAAI,CAAC;EACH,gBAAgB,ECHR,MAAM;CDIf"
+	"mappings": "AAAA,OAAO,CAAP,0EAAO;;AAGP,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,IAAI;CACZ;;;AAED,AAAA,MAAM;AACN,GAAG,CAAC;EACF,gBAAgB,ECTR,OAAO;EDUf,KAAK,EAAE,IAAI;CACZ;;;AAED,AAAA,GAAG,CAAC;EACF,gBAAgB,ECbR,OAAO;CDchB"
 }

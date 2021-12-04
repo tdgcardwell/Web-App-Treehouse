@@ -2,5 +2,16 @@
         "variables";
 
 body {
+  background-color: #fff;
+  color: #000;
+}
+
+header,
+nav {
   background-color: $color1;
+  color: #fff;
+}
+
+nav {
+  background-color: $color2;
 }

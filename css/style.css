@@ -1,7 +1,20 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 /* line 4, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 body {
-  background-color: purple;
+  background-color: #fff;
+  color: #000;
+}
+
+/* line 9, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+header,
+nav {
+  background-color: #7577bf;
+  color: #fff;
+}
+
+/* line 15, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+nav {
+  background-color: #4d4c72;
 }
 
 /*# sourceMappingURL=style.css.map */
