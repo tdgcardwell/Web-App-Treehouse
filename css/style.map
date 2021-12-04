@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import \"https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css\",\n        \"variables\";\n\nbody {\n  background-color: $color1;\n}\n",
+		"// colors\n$color1 : purple;\n"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAP,0EAAO;;AAGP,AAAA,IAAI,CAAC;EACH,gBAAgB,ECHR,MAAM;CDIf"
+}
