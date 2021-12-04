@@ -15,3 +15,27 @@ nav {
 nav {
   background-color: $color2;
 }
+
+header,
+nav ul {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+  margin: 0;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 6em;
+}

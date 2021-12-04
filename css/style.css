@@ -17,4 +17,32 @@ nav {
   background-color: #4d4c72;
 }
 
+/* line 19, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+header,
+nav ul {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* line 29, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+nav ul {
+  width: 100%;
+}
+
+/* line 33, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+nav li {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+/* line 38, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+.avatar {
+  border-radius: 50%;
+  height: 6em;
+}
+
 /*# sourceMappingURL=style.css.map */
