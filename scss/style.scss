@@ -45,7 +45,7 @@ nav li {
   height: 3em;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-size: 1rem;
 }
 
@@ -59,4 +59,22 @@ section {
 
 section:last-child {
   border: none;
+}
+
+.social-badge {
+  margin: .5rem;
+  border-radius: 5px;
+  border: 1px solid $midgrey;
+  padding: .5rem;
+  background-color: $lightgrey;
+}
+
+section h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: .5rem;
+}
+
+.navicon {
+  stroke: #fff;
 }
