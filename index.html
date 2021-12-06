@@ -101,6 +101,8 @@
       <section id="new-members">
         <h3>New Members</h3>
 
+        <!-- dynamically add this content w/ JS -->
+
         <div class="new-member">
           1
         </div>
@@ -120,14 +122,57 @@
       </section>
 
       <section id="recent-activity">
-        recent
+        <h3>Recent</h3>
+
+        <!-- dynamically add this content w/ JS -->
+
+        <div class="activity">
+          1
+        </div>
+
+        <div class="activity">
+          2
+        </div>
+
+        <div class="activity">
+          3
+        </div>
+
+        <div class="activity">
+          4
+        </div>
       </section>
+
       <section id="message">
-        message
+        <h3>message user</h3>
+        <form class="message" action="index.html" method="post">
+          <input type="text" name="search" value="" placeholder="Search for User">
+          <textarea name="message" rows="8" cols="80" placeholder="Message for User"></textarea>
+          <button type="submit" name="Send">Send</button>
+        </form>
       </section>
+
       <section id="settings">
-        settings
+        <h3>settings</h3>
+
+        <form class="settings" action="index.html" method="post">
+
+          <label for="email-notifications">Send Email Notifications</label>
+          <input type="checkbox" id="email-notifications" name="email-notifications" value="Send Email Notifications" checked><br>
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+          <label for="set-profile-to-public">Set Profile to Public</label>
+          <input type="checkbox" id="set-profile-to-public" name="set-profile-to-public" value="set-profile-to-public" checked>
+
+
+        </form>
+
       </section>
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js" integrity="sha512-O2fWHvFel3xjQSi9FyzKXWLTvnom+lOYR/AUEThL/fbP4hv1Lo5LCFCGuTXBRyKC4K4DJldg5kxptkgXAzUpvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

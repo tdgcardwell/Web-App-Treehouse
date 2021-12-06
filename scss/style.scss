@@ -1,7 +1,11 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css",
-        "variables";
+        "variables", "slider";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #fff;
@@ -60,13 +64,16 @@ header h1 sup {
 }
 
 section,
-.new-member {
+.new-member,
+.activity {
   padding: 1rem;
   border-bottom: 1px solid $midgrey;
 }
 
-.new-member:last-child {
+.new-member:last-child,
+.activity:last-child, {
   border: none;
+  padding-bottom: 0;
 }
 
 .id-badge {
@@ -125,4 +132,28 @@ section h3 {
 header h2 {
   font-weight: 400;
   font-size: .7rem;
+}
+
+input[type='text'],
+textarea,
+button {
+  width: 100%;
+  display: block;
+  border: 1px solid $midgrey;
+  background-color: $lightgrey;
+  outline: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+button,
+.alert {
+  color: #fff;
+  background-color: $color1;
+  border: 1px solid $color2;
+}
+
+button {
+  text-transform: uppercase;
 }
