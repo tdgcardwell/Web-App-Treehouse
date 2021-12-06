@@ -78,11 +78,36 @@ section {
 }
 
 /* line 71, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+.dash-label {
+  display: flex;
+}
+
+/* line 75, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+.dash-label * {
+  flex-grow: 1;
+}
+
+/* line 79, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+.dash-label h2 {
+  flex-grow: 0;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* line 85, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+#dashboard .spacer {
+  background-color: #f7f7f7;
+  border: solid 1px #cccccc;
+  border-top: none;
+  border-right: none;
+}
+
+/* line 92, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section:last-child {
   border: none;
 }
 
-/* line 75, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+/* line 96, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge {
   margin: .5rem;
   border-radius: 5px;
@@ -91,20 +116,20 @@ section:last-child {
   background-color: #f7f7f7;
 }
 
-/* line 83, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+/* line 104, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section h3 {
   text-transform: uppercase;
   font-weight: 400;
   margin-left: .5rem;
 }
 
-/* line 89, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+/* line 110, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .navicon {
   fill: #fff;
   height: 2rem;
 }
 
-/* line 94, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
+/* line 115, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 header h2 {
   font-weight: 400;
   font-size: .7rem;

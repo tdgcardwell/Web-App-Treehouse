@@ -68,6 +68,27 @@ section {
   margin-left: 15px;
 }
 
+.dash-label {
+  display: flex;
+}
+
+.dash-label * {
+  flex-grow: 1;
+}
+
+.dash-label h2 {
+  flex-grow: 0;
+  padding: 1rem;
+  margin: 0;
+}
+
+#dashboard .spacer {
+  background-color: $lightgrey;
+  border: solid 1px $midgrey;
+  border-top: none;
+  border-right: none;
+}
+
 section:last-child {
   border: none;
 }
