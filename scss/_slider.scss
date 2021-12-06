@@ -20,31 +20,37 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: $midgrey;
+  border: 2px solid $lightgrey;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
+// I understand that this is the part that is the 'toggle' that slides across.
 .slider:before {
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+
+  // left: 4px;
+  // bottom: 4px;
+  
+  background-color: #fff;
+  border: 2px solid $lightgrey;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: $color1;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px $color1;
 }
 
+// I understand that this is the part making the movement happen when the box is checked.
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);

@@ -23,35 +23,35 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #cccccc;
+  border: 2px solid #f7f7f7;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-/* line 28, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 30, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider:before {
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #fff;
+  border: 2px solid #f7f7f7;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-/* line 40, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 45, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7577bf;
 }
 
-/* line 44, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 49, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #7577bf;
 }
 
-/* line 48, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 54, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -59,12 +59,12 @@ input:checked + .slider:before {
 }
 
 /* Rounded sliders */
-/* line 55, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 61, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider.round {
   border-radius: 34px;
 }
 
-/* line 59, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
+/* line 65, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider.round:before {
   border-radius: 50%;
 }
