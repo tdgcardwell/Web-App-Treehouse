@@ -17,6 +17,7 @@ nav {
 
 nav {
   background-color: $color2;
+  padding: 0 2.25rem;
 }
 
 header,
@@ -54,8 +55,18 @@ header h1 sup {
   font-size: .5rem;
 }
 
-section {
+.alert-space {
+  min-height: 1rem;
+}
+
+section,
+.new-member {
+  padding: 1rem;
   border-bottom: 1px solid $midgrey;
+}
+
+.new-member:last-child {
+  border: none;
 }
 
 .id-badge {
@@ -94,7 +105,7 @@ section:last-child {
 }
 
 .social-badge {
-  margin: .5rem;
+  margin-top: 1rem;
   border-radius: 5px;
   border: 1px solid $midgrey;
   padding: .5rem;
@@ -104,7 +115,6 @@ section:last-child {
 section h3 {
   text-transform: uppercase;
   font-weight: 400;
-  margin-left: .5rem;
 }
 
 .navicon {
