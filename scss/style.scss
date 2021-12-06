@@ -11,6 +11,7 @@ body {
   background-color: #fff;
   color: #000;
   font-family: "Open Sans";
+  font-weight: 400;
 }
 
 header,
@@ -47,6 +48,10 @@ nav li {
 
 .avatar {
   border-radius: 50%;
+  height: 6em;
+}
+
+.id-badge .avatar {
   height: 3em;
 }
 
@@ -74,6 +79,14 @@ section,
 .activity:last-child, {
   border: none;
   padding-bottom: 0;
+}
+
+.new-member {
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
 }
 
 .id-badge {
@@ -109,6 +122,7 @@ section,
 
 section:last-child {
   border: none;
+  margin-bottom: 1.5rem;
 }
 
 .social-badge {
@@ -136,7 +150,8 @@ header h2 {
 
 input[type='text'],
 textarea,
-button {
+button,
+select {
   width: 100%;
   display: block;
   border: 1px solid $midgrey;
@@ -145,6 +160,16 @@ button {
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 5px;
+}
+
+select {
+  color: $darkgrey;
+  margin-top: 2rem;
+}
+
+button:not([type='submit']) {
+  background-color: $darkgrey;
+  border: none;
 }
 
 button,
@@ -156,4 +181,22 @@ button,
 
 button {
   text-transform: uppercase;
+}
+
+.leave-room-for-jesus {
+    // this class name is purely to entertain myself, and remind me what it does.
+    // the other option was to call it ".dont-stand-so-close-to-me"...
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+.leave-room-for-jesus *:first-child {
+  margin-right: auto;
+}
+
+.share-space {
+  display: flex;
+  gap: 1rem;
 }
