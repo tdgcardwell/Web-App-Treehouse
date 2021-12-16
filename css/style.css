@@ -130,19 +130,18 @@ section,
 .activity {
   padding: 1rem;
   border-bottom: 1px solid #cccccc;
+  text-align: center;
+}
+section .email,
+.new-member .email,
+.activity .email {
+  color: #7577bf;
 }
 
 .new-member:last-child,
 .activity:last-child {
   border: none;
   padding-bottom: 0;
-}
-
-.new-member {
-  text-align: center;
-}
-.new-member .email {
-  color: #7577bf;
 }
 
 h4 {

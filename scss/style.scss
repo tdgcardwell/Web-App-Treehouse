@@ -73,21 +73,17 @@ section,
 .activity {
   padding: 1rem;
   border-bottom: 1px solid $midgrey;
+  text-align: center;
+
+  .email {
+    color: $color1;
+  }
 }
 
 .new-member:last-child,
 .activity:last-child, {
   border: none;
   padding-bottom: 0;
-}
-
-.new-member {
-  text-align: center;
-
-  .email {
-    color: $color1;
-  }
-
 }
 
 h4 {
