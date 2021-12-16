@@ -31,6 +31,8 @@
   content: "";
   height: 26px;
   width: 26px;
+  left: 0;
+  bottom: 0;
   background-color: #fff;
   border: 2px solid #f7f7f7;
   -webkit-transition: 0.5s;
@@ -194,7 +196,8 @@ section:last-child {
 
 section h3 {
   text-transform: uppercase;
-  font-weight: 400;
+  text-align: left;
+  font-weight: 600;
 }
 
 .navicon {

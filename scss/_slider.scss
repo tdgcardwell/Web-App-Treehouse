@@ -1,4 +1,4 @@
-// I don't remember learning how to make sliders from checkboxes as part of this course... Hopefully I didn't miss that somewhere! So this is 'borrowed' from https://www.w3schools.com/howto/howto_css_switch.asp and then I changed the styling to match the mock-up. If this is not allowed, please point me to the relevant part of the course where I should have learned this bit!
+// I don't remember learning how to make sliders from checkboxes as part of this course... Hopefully I didn't miss that somewhere! So this is 'borrowed' / 'inspired by' https://www.w3schools.com/howto/howto_css_switch.asp and then I changed the styling to match the mock-up. If this is not allowed, please point me to the relevant part of the course where I should have learned this bit!
 
 .switch {
   position: relative;
@@ -33,9 +33,9 @@
   height: 26px;
   width: 26px;
 
-  // left: 4px;
-  // bottom: 4px;
-  
+  left: 0;
+  bottom: 0;
+
   background-color: #fff;
   border: 2px solid $lightgrey;
   -webkit-transition: .5s;
