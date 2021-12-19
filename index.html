@@ -120,6 +120,45 @@ const myChart = new Chart(
 
       <section id="daily-traffic">
         <h3>daily traffic</h3>
+        <div>
+          <canvas id="dailyTraffic">
+              <!-- Fallback / screen reder content -->
+              <p>Text Here should not be displayed</p>
+
+              <script>
+
+              const labels1 = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+];
+const data1 = {
+  labels: labels1,
+  datasets: [{
+    label: 'Butts',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: [0, 10, 5, 2, 20, 30, 45],
+  }]
+};
+
+const config1 = {
+  type: 'bar',
+  data: data1,
+  options: {}
+};
+
+const dailyTraffic = new Chart(
+    document.getElementById('dailyTraffic'),
+    config1
+  );
+
+              </script>
+            </canvas>
+        </div>
       </section>
 
       <section id="mobile-users">
