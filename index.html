@@ -71,6 +71,10 @@
 
       <div class="alert-space">
         <!-- Alert will get added here -->
+        <div class="alert">
+          <p><strong>Alert:</strong> You have unread messages</p>
+          <p>X</p>
+        </div>
       </div>
 
       <section id="traffic">
@@ -84,20 +88,39 @@
               <script>
 
               const labels = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  'Noon',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  'Midnight',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
 ];
 const data = {
   labels: labels,
   datasets: [{
-    label: 'My First dataset',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: [0, 10, 5, 2, 20, 30, 45],
+    label: 'Hourly',
+    backgroundColor: 'rgb(117 119 191 / 52%)',
+    borderColor: '#4d4c72',
+    fill: true,
+    data: [50, 85, 200, 250, 200, 250, 265, 183, 96, 130, 185, 200, 230, 250, 176, 90, 70, 50, 45, 25, 10, 5, 0, 0, 16],
   }]
 };
 
@@ -105,6 +128,12 @@ const config = {
   type: 'line',
   data: data,
   options: {
+    elements: {
+      line: {
+        borderWidth: 0,
+        tension: (.17,.67,.83,.67)
+      }
+    },
     plugins: {
       legend: {
         display: false
@@ -177,6 +206,54 @@ const dailyTraffic = new Chart(
 
       <section id="mobile-users">
         <h3>mobile users</h3>
+        <div>
+          <canvas id="mobileUsers">
+              <!-- Fallback / screen reder content -->
+              <p>Number of mobile users</p>
+
+              <script>
+
+              const devices = [
+  'Desktop',
+  'Tablet',
+  'Phone'
+];
+const userdata = {
+  labels: devices,
+  datasets: [{
+    label: 'Butts',
+    backgroundColor: ['#7577bf', '#81c98f', '#58b6c8'],
+    // borderColor: '['#7577bf', '#81c98f', '#58b6c8'],
+    data: [60, 25, 15],
+  }]
+};
+
+const config2 = {
+  type: 'doughnut',
+  data: userdata,
+  options: {
+    elements: {
+      arc: {
+        borderWidth: 0
+      }
+    },
+    plugins: {
+      legend: {
+        position: 'right'
+      }
+    }
+  }
+};
+
+const mobileUsers = new Chart(
+    document.getElementById('mobileUsers'),
+    config2
+  );
+
+
+              </script>
+            </canvas>
+        </div>
       </section>
 
       <section id="social-stats">

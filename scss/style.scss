@@ -15,15 +15,34 @@ body {
 }
 
 header,
-nav {
+nav,
+.alert {
   background-color: $color1;
   color: #fff;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: .5rem .75rem;
+  font-weight: 300;
+  height: 2.5rem;
+  position: relative;
+
+  p {
+    margin: 0;
+  }
 }
 
 nav {
   background-color: $color2;
   padding: 0 2.25rem;
 }
+
+
 
 header,
 nav ul {
@@ -211,8 +230,7 @@ button:not([type='submit']) {
   border: none;
 }
 
-button,
-.alert {
+button {
   color: #fff;
   background-color: $color1;
   border: 1px solid $color2;
