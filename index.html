@@ -104,7 +104,13 @@ const data = {
 const config = {
   type: 'line',
   data: data,
-  options: {}
+  options: {
+    plugins: {
+      legend: {
+        display: false
+      }
+    }
+  }
 };
 
 const myChart = new Chart(
@@ -128,33 +134,41 @@ const myChart = new Chart(
               <script>
 
               const labels1 = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
+  'S',
+  'M',
+  'T',
+  'W',
+  'Th',
+  'F',
+  'S'
 ];
 const data1 = {
   labels: labels1,
   datasets: [{
     label: 'Butts',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: [0, 10, 5, 2, 20, 30, 45],
+    backgroundColor: '#7577bf',
+    borderColor: '#4d4c72',
+    data: [75, 125, 175, 125, 225, 200, 100],
   }]
 };
 
 const config1 = {
   type: 'bar',
   data: data1,
-  options: {}
+  options: {
+    plugins: {
+      legend: {
+        display: false
+      }
+    }
+  }
 };
 
 const dailyTraffic = new Chart(
     document.getElementById('dailyTraffic'),
     config1
   );
+
 
               </script>
             </canvas>
