@@ -125,6 +125,9 @@ nav,
 nav {
   background-color: #4d4c72;
   padding: 0 2.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 header,
