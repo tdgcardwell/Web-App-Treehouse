@@ -17,6 +17,11 @@ $('.closeOut').click(function() {
   $('.alert').slideUp();
 });
 
+// notification dropdown
+$('.bell').click(function(){
+  $('.dropdown').slideToggle();
+});
+
 
 // --------------------------- New Members
 
@@ -60,17 +65,17 @@ let recentActivity = [
   {name: "Victoria Chambers",
   number: 1,
   what: "commented on <strong>WebApp's SEO Tips</strong>",
-  when: "2 hours ago"},
-  {name: "Victoria Chambers",
-  number: 1,
+  when: "Just Now"},
+  {name: "Algernon Fudginton",
+  number: 2,
   what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "1 hour ago"},
+  {name: "Juliet Montague",
+  number: 3,
+  what: "liked <strong>WebApp's SEO Tips</strong>",
   when: "2 hours ago"},
-  {name: "Victoria Chambers",
-  number: 1,
-  what: "commented on <strong>WebApp's SEO Tips</strong>",
-  when: "2 hours ago"},
-  {name: "Victoria Chambers",
-  number: 1,
+  {name: "Juliet Montague",
+  number: 3,
   what: "commented on <strong>WebApp's SEO Tips</strong>",
   when: "2 hours ago"}
 ];

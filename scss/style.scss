@@ -54,6 +54,10 @@ nav,
   align-self: flex-start;
 }
 
+.dropdown {
+  display: none;
+}
+
 
 // for JS to display alertbar, if there are alerts.
 .alerts {
