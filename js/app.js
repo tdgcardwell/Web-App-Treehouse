@@ -51,3 +51,38 @@ for (let i=0; i<newMembers.length; i++) {
 
 // add it.
 $('#new-members h3').after(membersToInsert);
+
+
+// --------------------------- Recent Activity
+
+// an array with Recent Activity - which would be set by the app in real life
+let recentActivity = [
+  {name: "Victoria Chambers",
+  number: 1,
+  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"},
+  {name: "Victoria Chambers",
+  number: 1,
+  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"},
+  {name: "Victoria Chambers",
+  number: 1,
+  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"},
+  {name: "Victoria Chambers",
+  number: 1,
+  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"}
+];
+
+// something to collect the info...
+let activityToInsert = "";
+
+// loop through each, building info
+for (let i=0; i<recentActivity.length; i++) {
+  let eachOne = `<div class="activity"><img class="avatar" src="imgs/members/member-${recentActivity[i]["number"]}.jpg" alt="${recentActivity[i]["name"]}"><br><span class="activity-message">${recentActivity[i]["name"]} ${recentActivity[i]["what"]}</span><br><span class="activity-message">${recentActivity[i]["when"]}</span></div>`;
+  activityToInsert += eachOne;
+}
+
+// add it.
+$('#recent-activity').after(activityToInsert);
