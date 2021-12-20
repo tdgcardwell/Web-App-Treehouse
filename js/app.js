@@ -4,11 +4,11 @@ let notifications = 0;
 let notificationDetails = [
   {name: "Juliet Montague",
   number: 3,
-  what: "liked <strong>WebApp's SEO Tips</strong>",
+  what: "sent you a message",
   when: "2 hours ago"},
   {name: "Juliet Montague",
   number: 3,
-  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  what: "liked your post <strong>Front, Back, and Somewhere In-Between</strong>.",
   when: "2 hours ago"}
 ];
 
@@ -19,6 +19,20 @@ if (notifications) {
   $('.alert').addClass('alerts');
   // also add notification icon to top
   $('.bell').after('<span class="bell-ring">o</span>');
+
+  // and display those:
+  // something to collect the info...
+  let notificationsToInsert = "";
+
+  // loop through each, building info
+  for (let i=0; i<notificationDetails.length; i++) {
+    let eachOne = `<div class="activity"><img class="avatar" src="imgs/members/member-${notificationDetails[i]["number"]}.jpg" alt="${notificationDetails[i]["name"]}"><br><span class="activity-message">${notificationDetails[i]["name"]} ${notificationDetails[i]["what"]}</span><br><span class="activity-message">${notificationDetails[i]["when"]}</span></div>`;
+    notificationsToInsert += eachOne;
+  }
+
+  // add it.
+  $(".dropdown").append(notificationsToInsert);
+
 }
 
 // hide the alertbar when the X is clicked.
