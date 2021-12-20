@@ -1,9 +1,18 @@
 let notifications = 0;
 
-
 // this would be set by the app itself in 'real life'.
-notifications = 2;
+let notificationDetails = [
+  {name: "Juliet Montague",
+  number: 3,
+  what: "liked <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"},
+  {name: "Juliet Montague",
+  number: 3,
+  what: "commented on <strong>WebApp's SEO Tips</strong>",
+  when: "2 hours ago"}
+];
 
+notifications = notificationDetails.length;
 
 if (notifications) {
   // show the alertbar
