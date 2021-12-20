@@ -22,7 +22,7 @@ nav,
 }
 
 .alert {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
@@ -35,6 +35,29 @@ nav,
   p {
     margin: 0;
   }
+}
+
+.bell {
+  margin: 0 1rem;
+}
+
+.bell-ring {
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: -1rem;
+  margin-top: 5px;
+  color: $notify;
+  background-color: $notify;
+  width: .75rem;
+  height: .75rem;
+  font-size: 1px;
+  align-self: flex-start;
+}
+
+
+// for JS to display alertbar, if there are alerts.
+.alerts {
+  display: flex;
 }
 
 nav {
@@ -113,6 +136,7 @@ h4 {
   border-left: 1px solid $darkgrey;
   display: flex;
   align-items: center;
+  margin-left: .5rem;
 }
 
 .id-badge * {
