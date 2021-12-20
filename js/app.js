@@ -90,4 +90,4 @@ for (let i=0; i<recentActivity.length; i++) {
 }
 
 // add it.
-$('#recent-activity').after(activityToInsert);
+$('#recent-activity h3').after(activityToInsert);
