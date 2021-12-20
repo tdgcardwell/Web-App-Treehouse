@@ -1,8 +1,8 @@
-let notifications = false;
+let notifications = 0;
 
 
 // this would be set by the app itself in 'real life'.
-notifications = true;
+notifications = 2;
 
 
 if (notifications) {
