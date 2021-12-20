@@ -1,6 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&display=swap");
-/* line 3, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .switch {
   position: relative;
   display: inline-block;
@@ -8,14 +7,12 @@
   height: 34px;
 }
 
-/* line 10, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* line 16, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -25,11 +22,10 @@
   bottom: 0;
   background-color: #cccccc;
   border: 2px solid #f7f7f7;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-/* line 30, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider:before {
   position: absolute;
   content: "";
@@ -39,21 +35,18 @@
   bottom: 0;
   background-color: #fff;
   border: 2px solid #f7f7f7;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-/* line 44, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:checked + .slider {
   background-color: #7577bf;
 }
 
-/* line 48, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:focus + .slider {
   box-shadow: 0 0 1px #7577bf;
 }
 
-/* line 53, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -61,22 +54,18 @@ input:checked + .slider:before {
 }
 
 /* Rounded sliders */
-/* line 60, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider.round {
   border-radius: 34px;
 }
 
-/* line 64, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/_slider.scss */
 .slider.round:before {
   border-radius: 50%;
 }
 
-/* line 6, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 10, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 body {
   background-color: #fff;
   color: #000;
@@ -84,7 +73,6 @@ body {
   font-weight: 400;
 }
 
-/* line 17, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 header,
 nav,
 .alert {
@@ -92,30 +80,25 @@ nav,
   color: #fff;
 }
 
-/* line 24, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .alert {
   display: none;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
   border-radius: 5px;
-  padding: .5rem .75rem;
+  padding: 0.5rem 0.75rem;
   font-weight: 300;
   height: 2.5rem;
   position: relative;
 }
-
-/* line 35, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .alert p {
   margin: 0;
 }
 
-/* line 40, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .bell {
   margin: 0 1rem;
 }
 
-/* line 44, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .bell-ring {
   display: inline-block;
   border-radius: 50%;
@@ -123,29 +106,27 @@ nav,
   margin-top: 5px;
   color: #90ee90;
   background-color: #90ee90;
-  width: .75rem;
-  height: .75rem;
+  width: 0.75rem;
+  height: 0.75rem;
   font-size: 1px;
   align-self: flex-start;
 }
 
-/* line 57, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .dropdown {
   display: none;
+  padding: 1rem;
+  box-shadow: rgba(77, 76, 114, 0.5) 0px 2px 4px 0px inset;
 }
 
-/* line 63, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .alerts {
   display: flex;
 }
 
-/* line 67, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 nav {
   background-color: #4d4c72;
   padding: 0 2.25rem;
 }
 
-/* line 74, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 header,
 nav ul {
   padding: 1rem;
@@ -157,46 +138,38 @@ nav ul {
   margin: 0;
 }
 
-/* line 85, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 nav ul {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-/* line 89, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 nav li {
   display: inline-block;
   flex-grow: 1;
   text-align: center;
 }
 
-/* line 95, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .avatar {
   border-radius: 50%;
   height: 6em;
 }
 
-/* line 100, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .id-badge .avatar {
   height: 3em;
 }
 
-/* line 104, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 h1, h2, h3 {
   font-size: 1rem;
   font-weight: 400;
 }
 
-/* line 109, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 header h1 sup {
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
 
-/* line 113, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .alert-space {
   min-height: 1rem;
 }
 
-/* line 117, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section,
 .new-member,
 .activity {
@@ -204,57 +177,47 @@ section,
   border-bottom: 1px solid #cccccc;
   text-align: center;
 }
-
-/* line 124, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section .email,
 .new-member .email,
 .activity .email {
   color: #7577bf;
 }
 
-/* line 129, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .new-member:last-child,
 .activity:last-child {
   border: none;
   padding-bottom: 0;
 }
 
-/* line 135, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 h4 {
   margin: 0;
 }
 
-/* line 139, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .id-badge {
   border-left: 1px solid #999a9a;
   display: flex;
   align-items: center;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
-/* line 146, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .id-badge * {
   margin-left: 15px;
 }
 
-/* line 150, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .dash-label {
   display: flex;
 }
 
-/* line 154, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .dash-label * {
   flex-grow: 1;
 }
 
-/* line 158, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .dash-label h2 {
   flex-grow: 0;
   padding: 1rem;
   margin: 0;
 }
 
-/* line 164, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 #dashboard .spacer {
   background-color: #f7f7f7;
   border: solid 1px #cccccc;
@@ -262,13 +225,11 @@ h4 {
   border-right: none;
 }
 
-/* line 171, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section:last-child {
   border: none;
   margin-bottom: 1.5rem;
 }
 
-/* line 176, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge {
   margin-top: 1rem;
   border-radius: 5px;
@@ -278,30 +239,22 @@ section:last-child {
   display: flex;
   flex-direction: row;
 }
-
-/* line 185, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge div {
   margin: 0;
   margin-left: 1rem;
   text-align: left;
 }
-
-/* line 191, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge h4 {
   color: #7577bf;
   font-weight: 400;
   margin-top: 1rem;
 }
-
-/* line 197, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge p {
   font-size: 2.5rem;
   font-weight: 300;
   color: #999a9a;
   margin: 0;
 }
-
-/* line 204, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-badge .avatar {
   background-color: #7577bf;
   width: 6em;
@@ -309,34 +262,29 @@ section:last-child {
   display: flex;
 }
 
-/* line 213, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .social-icon {
   width: 50%;
   fill: #fff;
   margin: auto;
 }
 
-/* line 221, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 section h3 {
   text-transform: uppercase;
   text-align: left;
   font-weight: 600;
 }
 
-/* line 227, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .navicon {
   fill: #fff;
   height: 2rem;
 }
 
-/* line 232, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 header h2 {
   font-weight: 400;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
-/* line 237, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
-input[type='text'],
+input[type=text],
 textarea,
 button,
 select {
@@ -350,31 +298,26 @@ select {
   border-radius: 5px;
 }
 
-/* line 251, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 select {
   color: #999a9a;
   margin-top: 2rem;
 }
 
-/* line 256, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
-button:not([type='submit']) {
+button:not([type=submit]) {
   background-color: #999a9a;
   border: none;
 }
 
-/* line 261, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 button {
   color: #fff;
   background-color: #7577bf;
   border: 1px solid #4d4c72;
 }
 
-/* line 267, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 button {
   text-transform: uppercase;
 }
 
-/* line 271, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .leave-room-for-jesus {
   display: flex;
   align-items: center;
@@ -382,12 +325,10 @@ button {
   margin: 1rem 0;
 }
 
-/* line 280, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .leave-room-for-jesus *:first-child {
   margin-right: auto;
 }
 
-/* line 284, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Web-App-Treehouse/scss/style.scss */
 .share-space {
   display: flex;
   gap: 1rem;
