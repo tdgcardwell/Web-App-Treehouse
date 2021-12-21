@@ -175,4 +175,14 @@ setProfileToPublic.change(function() {
 // save the stored settings to local storage - NEEDS TO BE ADDED TO THE BUTTON
 function saveSettings() {
   localStorage.setItem('locallyStored', JSON.stringify(storedSettings));
+  console.log('settings saved');
 };
+
+
+// let's mess with these buttons
+
+let saveButton = $('#saveButton')
+saveButton.click(function() {
+  event.preventDefault();
+  saveSettings();
+});
