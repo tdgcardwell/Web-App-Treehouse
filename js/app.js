@@ -118,10 +118,19 @@ $('#recent-activity h3').after(activityToInsert);
 
 //  ------------------ settings
 
-let storedSettings = {
-  emailNotifications : true,
-  setProfileToPublic : true,
-};
+let storedSettings;
+
+if (localStorage.length > 0) {
+  // get stored settings
+  storedSettings = JSON.parse(localStorage.getItem('locallyStored'));
+  console.log('settings retrieved');
+} else {
+  storedSettings = {
+    emailNotifications : false,
+    setProfileToPublic : false,
+  };
+}
+
 
 // googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
 // Which I then adapted for my needs.
@@ -129,18 +138,43 @@ let storedSettings = {
 let emailNotifications = $('#emailNotifications');
 let setProfileToPublic = $('#setProfileToPublic');
 
-let storedNotify = storedSettings.emailNotifications;
-let storedPublic = storedSettings.setProfileToPublic
 
-function setSettings(which , stored) {
-  which.change(function() {
-    if ($(this).is(":checked")) {
-      console.log(stored);
-    } else {
-      console.log(' no');
-    }
-  });
-}
+// function setSettings(which , stored) {
+//   which.change(function() {
+//     if ($(this).is(":checked")) {
+//       stored = true;
+//     } else {
+//       stored = false;
+//     }
+//     console.log(storedSettings);
+//   });
+// }
+//
+// setSettings(emailNotifications , storedNotify);
+// setSettings(setProfileToPublic , storedPublic);
 
-setSettings(emailNotifications , storedNotify);
-setSettings(setProfileToPublic , storedPublic);
+// data attributes - look these up, and use to make this 1 function.
+
+emailNotifications.change(function() {
+  if ($(this).is(":checked")) {
+    storedNotify = true;
+  } else {
+    storedNotify = false;
+  }
+  storedSettings.emailNotifications = storedNotify;
+  console.log(storedSettings);
+});
+
+setProfileToPublic.change(function() {
+  if ($(this).is(":checked")) {
+    storedPublic = true;
+  } else {
+    storedPublic = false;
+  }
+  storedSettings.setProfileToPublic = storedPublic;
+  console.log(storedSettings);
+});
+
+// save the stored settings to local storage
+localStorage.setItem('locallyStored', JSON.stringify(storedSettings));
+// localStorage.setItem('somethingHere', 'testing');
