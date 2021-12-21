@@ -118,19 +118,23 @@ $('#recent-activity h3').after(activityToInsert);
 
 //  ------------------ settings
 
+// gotta declare it outside of a function
 let storedSettings;
 
+// if there are stored settings...
 if (localStorage.length > 0) {
-  // get stored settings
+  // ... get those stored settings
   storedSettings = JSON.parse(localStorage.getItem('locallyStored'));
   console.log('settings retrieved');
 } else {
+  // otherwise default to true for both.
   storedSettings = {
     emailNotifications : true,
     setProfileToPublic : true,
   };
 }
 
+// and adjust the sliders
 let emailNotifications = $('#emailNotifications');
 let setProfileToPublic = $('#setProfileToPublic');
 
@@ -145,10 +149,6 @@ if (storedSettings.setProfileToPublic) {
 
 // googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
 // Which I then adapted for my needs.
-
-
-
-// data attributes - look these up, and use to make this 1 function.
 
 emailNotifications.change(function() {
   if ($(this).is(":checked")) {
@@ -170,7 +170,9 @@ setProfileToPublic.change(function() {
   console.log(storedSettings);
 });
 
-// save the stored settings to local storage
+// data attributes - look these up, and use to make this 1 function.
+
+// save the stored settings to local storage - NEEDS TO BE ADDED TO THE BUTTON
 function saveSettings() {
   localStorage.setItem('locallyStored', JSON.stringify(storedSettings));
 };
