@@ -118,7 +118,10 @@ $('#recent-activity h3').after(activityToInsert);
 
 //  ------------------ settings
 
-// let storedSettings = "";
+let storedSettings = {
+  emailNotifications : true,
+  setProfileToPublic : true,
+};
 
 // googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
 // Which I then adapted for my needs.
@@ -133,6 +136,5 @@ function setSettings(which) {
   });
 }
 
-
-setSettings('email-notifications');
-setSettings('set-profile-to-public');
+setSettings('emailNotifications');
+setSettings('setProfileToPublic');
