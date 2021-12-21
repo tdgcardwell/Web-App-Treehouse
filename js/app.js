@@ -126,15 +126,21 @@ let storedSettings = {
 // googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
 // Which I then adapted for my needs.
 
-function setSettings(which) {
-  $('#' + which).change(function() {
+let emailNotifications = $('#emailNotifications');
+let setProfileToPublic = $('#setProfileToPublic');
+
+let storedNotify = storedSettings.emailNotifications;
+let storedPublic = storedSettings.setProfileToPublic
+
+function setSettings(which , stored) {
+  which.change(function() {
     if ($(this).is(":checked")) {
-      console.log(which + ' yes');;
+      console.log(stored);
     } else {
-      console.log(which + ' no');
+      console.log(' no');
     }
   });
 }
 
-setSettings('emailNotifications');
-setSettings('setProfileToPublic');
+setSettings(emailNotifications , storedNotify);
+setSettings(setProfileToPublic , storedPublic);
