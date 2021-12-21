@@ -131,6 +131,7 @@ if (localStorage.length > 0) {
   storedSettings = {
     emailNotifications : true,
     setProfileToPublic : true,
+    timeZone: 0
   };
 }
 
@@ -146,6 +147,8 @@ if (storedSettings.setProfileToPublic) {
   setProfileToPublic.prop("checked", true);
 }
 
+// set the menu
+// $('#timezones');
 
 // googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
 // Which I then adapted for my needs.
@@ -172,17 +175,37 @@ setProfileToPublic.change(function() {
 
 // data attributes - look these up, and use to make this 1 function.
 
-// save the stored settings to local storage - NEEDS TO BE ADDED TO THE BUTTON
+
+// what about the timezone?
+let timezones = $('#time_zones');
+let timezone;
+
+// this is super helpful: https://oscarotero.com/jquery/ !!
+
+timezones.change(function(){
+  timezone = $('#time_zones option').filter(':selected').attr("timeZoneId");
+  alert(timezone);
+})
+
+
+// save the stored settings to local storage
 function saveSettings() {
   localStorage.setItem('locallyStored', JSON.stringify(storedSettings));
   console.log('settings saved');
+  alert('settings saved');
 };
 
 
 // let's mess with these buttons
-
 let saveButton = $('#saveButton')
 saveButton.click(function() {
   event.preventDefault();
   saveSettings();
+});
+
+let cancelButton = $('#cancelButton')
+cancelButton.click(function() {
+  event.preventDefault();
+  localStorage.clear()
+  alert('settings reset');
 });

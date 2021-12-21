@@ -352,8 +352,8 @@ const mobileUsers = new Chart(
 
 
           <!-- Timezone list 'borrowed' from https://www.freeformatter.com/time-zone-list-html-select.html -->
-          <select>
-  <option value="">Select Timezone</option>
+          <select id="time_zones">
+  <option timeZoneId="0" value="">Select Timezone</option>
 
   <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
 	<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -441,7 +441,7 @@ const mobileUsers = new Chart(
 
           <div class="share-space">
             <button type="submit" name="save" id="saveButton">Save</button>
-            <button type="button" name="Cancel">Cancel</button>
+            <button type="button" name="Cancel" id="cancelButton">Cancel</button>
           </div>
 
         </form>
