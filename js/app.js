@@ -194,7 +194,10 @@ let timezone;
 // this is super helpful: https://oscarotero.com/jquery/ !!
 
 timezones.change(function(){
+  // attr this time!
   timezone = $('#time_zones option').filter(':selected').attr("timeZoneId");
+  // alert(timezone);
+  storedSettings.timeZone = timezone;
 })
 
 
