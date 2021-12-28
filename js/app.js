@@ -1,5 +1,4 @@
 let notifications = 0;
-<<<<<<< Updated upstream
 
 // this would be set by the app itself in 'real life'.
 let notificationDetails = [
@@ -12,12 +11,11 @@ let notificationDetails = [
   what: "liked your post <strong>Front, Back, and Somewhere In-Between</strong>.",
   when: "2 hours ago"}
 ];
-=======
+
 
 
 // this would be set by the app itself in 'real life'.
 notifications = 1;
->>>>>>> Stashed changes
 
 notifications = notificationDetails.length;
 
