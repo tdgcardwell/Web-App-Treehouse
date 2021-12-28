@@ -12,11 +12,6 @@ let notificationDetails = [
   when: "2 hours ago"}
 ];
 
-
-
-// this would be set by the app itself in 'real life'.
-notifications = 1;
-
 notifications = notificationDetails.length;
 
 if (notifications) {
@@ -47,13 +42,7 @@ $('.closeOut').click(function() {
 
 // notification dropdown
 $('.bell').click(function(){
-  // slide it up and down
   $('.dropdown').slideToggle();
-
-  // Also need to remove notification icon on initial click.
-  // Or...
-  // What if that gets removed when there are no more notifications? Maybe a number instead of a boolen?
-
 });
 
 
@@ -138,7 +127,7 @@ if (localStorage.length > 0) {
   storedSettings = JSON.parse(localStorage.getItem('locallyStored'));
   console.log('settings retrieved');
 } else {
-  // otherwise default to true for both.
+  // otherwise default to true for both, and 0 for timezone
   storedSettings = {
     emailNotifications : true,
     setProfileToPublic : true,
@@ -159,10 +148,13 @@ if (storedSettings.setProfileToPublic) {
 }
 
 // set the menu
-// $('#timezones');
+// we want to filter by timeZoneId
+let storedZone = $('#time_zones option').filter('[timeZoneId =' + storedSettings.timeZone + ']');
+// then we want to give that one the property 'selected'
+storedZone.prop("selected", true);
 
-// googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery
-// Which I then adapted for my needs.
+
+// googled "jquery boolean checkbox" to see how to concisely do that. which got me to here: https://stackoverflow.com/questions/37301563/how-to-get-bool-value-from-checkbox-in-javascript-jquery - Which I then adapted for my needs.
 
 emailNotifications.change(function() {
   if ($(this).is(":checked")) {
@@ -171,7 +163,7 @@ emailNotifications.change(function() {
     storedNotify = false;
   }
   storedSettings.emailNotifications = storedNotify;
-  console.log(storedSettings);
+  // console.log(storedSettings);
 });
 
 setProfileToPublic.change(function() {
@@ -181,7 +173,7 @@ setProfileToPublic.change(function() {
     storedPublic = false;
   }
   storedSettings.setProfileToPublic = storedPublic;
-  console.log(storedSettings);
+  // console.log(storedSettings);
 });
 
 // data attributes - look these up, and use to make this 1 function.
