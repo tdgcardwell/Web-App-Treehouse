@@ -195,7 +195,6 @@ let timezone;
 
 timezones.change(function(){
   timezone = $('#time_zones option').filter(':selected').attr("timeZoneId");
-  alert(timezone);
 })
 
 
