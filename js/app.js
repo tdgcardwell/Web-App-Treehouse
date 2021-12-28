@@ -1,4 +1,5 @@
 let notifications = 0;
+<<<<<<< Updated upstream
 
 // this would be set by the app itself in 'real life'.
 let notificationDetails = [
@@ -11,6 +12,12 @@ let notificationDetails = [
   what: "liked your post <strong>Front, Back, and Somewhere In-Between</strong>.",
   when: "2 hours ago"}
 ];
+=======
+
+
+// this would be set by the app itself in 'real life'.
+notifications = 1;
+>>>>>>> Stashed changes
 
 notifications = notificationDetails.length;
 
@@ -42,7 +49,13 @@ $('.closeOut').click(function() {
 
 // notification dropdown
 $('.bell').click(function(){
+  // slide it up and down
   $('.dropdown').slideToggle();
+
+  // Also need to remove notification icon on initial click.
+  // Or...
+  // What if that gets removed when there are no more notifications? Maybe a number instead of a boolen?
+
 });
 
 
