@@ -234,25 +234,39 @@ Message User
 ======================================================
 */
 
-// while we're at it - the send button needs attention
-let sendButton = $('#sendButton')
-sendButton.click(function() {
-  event.preventDefault();
-  // in real life send the message, for now display a fake confirmation.
+let searchBar = $("#searchbar");
+let messageBox = $("#messagebox");
+let sendButton = $('#sendButton');
+
+
+// autocomplete
+// ------------------------------------------
+// started by borrowing my searchbar code from previous photogallery project: https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/ (Can see how far I got with that line of thought via github.) Then discovered JQuery has an autocomplete: https://api.jqueryui.com/autocomplete/ so I used from there instead.
+
+// The information to search would probably be an array from the app in "real life" - but for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
+searchBar.autocomplete({
+  source: ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell', 'Julie Curry', 'Victor Garber', 'Alphonse De Matteo', 'Stephen X King', 'Gertude Putman', 'Kathlene Betz', 'Quentin J Roney', 'Devin Ashmore' ]
 });
 
 
-// started by borrowing my searchbar code from previous photogallery project: https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/ (Can see how far I got with that line of thought via github.) Then discovered JQuery has an autocomplete: https://api.jqueryui.com/autocomplete/ so I used from there instead.
+function writeMessage() {
+  // collect what we are sending, and who we are sending it to.
+  let toWhom = searchBar.val();
+  let message = messageBox.val();
+  console.log(toWhom);
+  console.log(message);
+}
 
-// The information to search - probably would be an array from the app in "real life" - but for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
-let tags = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell', 'Julie Curry', 'Victor Garber', 'Alphonse De Matteo', 'Stephen King'];
+function clearMessage() {
+  searchBar.val("");
+  messageBox.val("");
+}
 
-// The part that does the searching - matching to the beginning of the name.
-$( "#searchbar" ).autocomplete({
-  source: function( request, response ) {
-          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-          response( $.grep( tags, function( item ){
-              return matcher.test( item );
-          }) );
-      }
+// "send" the message
+// ------------------------------------------
+sendButton.click(function() {
+  event.preventDefault();
+  writeMessage();
+  // in real life send the message, for now display a fake confirmation.
+  clearMessage();
 });
