@@ -223,12 +223,12 @@ sendButton.click(function() {
 });
 
 
-// borrowing/adjusting my searchbar code from previous photogallery project:
+// started by borrowing my searchbar code from previous photogallery project:
 // https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/
 
 // get the information to search - probably would be an array from the app in "real life" - so I guess for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
 
-let users = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle'];
+let users = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell'];
 
 
 // function
@@ -243,19 +243,11 @@ function captionSearch() {
   // FOR each user
   for (i = 0; i < users.length; i++) {
 
-    // IF searchString to lowercase is NOT included
+    // IF searchString to lowercase is included
     if (users[i].toLowerCase().includes(searchString)) {
 
       console.log(users[i]);
 
-      // set to display none
-      // images[i].style.display="none";
-
-    // ELSE
-    // }else {
-
-      // display as normal
-      // images[i].style.display="block";
 
     //ENDIF
   // ENDFOR
@@ -271,4 +263,4 @@ function captionSearch() {
 let searchForUser = $('#searchbar');
 
 // when something changes (ie something is typed, or deleted), run the function.
-searchForUser.change(captionSearch());
+searchForUser.on('input', captionSearch );
