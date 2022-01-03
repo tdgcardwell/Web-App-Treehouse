@@ -1,3 +1,9 @@
+/*
+======================================================
+notifications
+======================================================
+*/
+
 let notifications = 0;
 
 // this would be set by the app itself in 'real life'.
@@ -46,7 +52,11 @@ $('.bell').click(function(){
 });
 
 
-// --------------------------- New Members
+/*
+======================================================
+New Members
+======================================================
+*/
 
 // an array with info of new members - which would be set by the app in real life
 let newMembers = [
@@ -80,8 +90,11 @@ for (let i=0; i<newMembers.length; i++) {
 // add it.
 $('#new-members h3').after(membersToInsert);
 
-
-// --------------------------- Recent Activity
+/*
+======================================================
+Recent Activity
+======================================================
+*/
 
 // an array with Recent Activity - which would be set by the app in real life
 let recentActivity = [
@@ -115,8 +128,11 @@ for (let i=0; i<recentActivity.length; i++) {
 // add it.
 $('#recent-activity h3').after(activityToInsert);
 
-
-//  ------------------ settings
+/*
+======================================================
+settings
+======================================================
+*/
 
 // gotta declare it outside of a function
 let storedSettings;
@@ -176,9 +192,6 @@ setProfileToPublic.change(function() {
   // console.log(storedSettings);
 });
 
-// data attributes - look these up, and use to make this 1 function.
-
-
 // what about the timezone?
 let timezones = $('#time_zones');
 let timezone;
@@ -215,6 +228,12 @@ cancelButton.click(function() {
   alert('settings reset');
 });
 
+/*
+======================================================
+Message User
+======================================================
+*/
+
 // while we're at it - the send button needs attention
 let sendButton = $('#sendButton')
 sendButton.click(function() {
@@ -223,46 +242,17 @@ sendButton.click(function() {
 });
 
 
-// started by borrowing my searchbar code from previous photogallery project:
-// https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/
+// started by borrowing my searchbar code from previous photogallery project: https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/ (Can see how far I got with that line of thought via github.) Then discovered JQuery has an autocomplete: https://api.jqueryui.com/autocomplete/ so I used from there instead.
 
+// The information to search - probably would be an array from the app in "real life" - but for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
+let tags = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell', 'Julie Curry', 'Victor Garber', 'Alphonse De Matteo', 'Stephen King'];
 
-
-// get the information to search - probably would be an array from the app in "real life" - so I guess for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
-
-let users = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell'];
-
-
-// function
-function captionSearch() {
-
-  // get input from search bar value
-  let searchString = document.getElementById('searchbar').value
-
-  // convert to lower case, so that search is not case sensitive
-  searchString=searchString.toLowerCase();
-
-  // FOR each user
-  for (i = 0; i < users.length; i++) {
-
-    // IF searchString to lowercase is included
-    if (users[i].toLowerCase().includes(searchString)) {
-
-      console.log(users[i]);
-
-
-    //ENDIF
-  // ENDFOR
-// end function
-    }
-  }
-}
-
-
-// Add the function to the searchbar
-// <input type="text" oninput="captionSearch()" name="search" placeholder="Search" id="searchbar" class="search">
-
-let searchForUser = $('#searchbar');
-
-// when something changes (ie something is typed, or deleted), run the function.
-searchForUser.on('input', captionSearch );
+// The part that does the searching - matching to the beginning of the name.
+$( "#searchbar" ).autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});
