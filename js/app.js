@@ -226,6 +226,8 @@ sendButton.click(function() {
 // started by borrowing my searchbar code from previous photogallery project:
 // https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/
 
+
+
 // get the information to search - probably would be an array from the app in "real life" - so I guess for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
 
 let users = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle', 'Thomas Cardwell'];
