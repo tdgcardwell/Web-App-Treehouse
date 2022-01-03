@@ -268,7 +268,6 @@ function writeMessage() {
   }
 
 
-
   if (toWhom == '') {
     alert('Hold up, who do you want to send this to?');
   } else if (message == '')
