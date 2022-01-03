@@ -214,3 +214,61 @@ cancelButton.click(function() {
   localStorage.clear()
   alert('settings reset');
 });
+
+// while we're at it - the send button needs attention
+let sendButton = $('#sendButton')
+sendButton.click(function() {
+  event.preventDefault();
+  // in real life send the message, for now display a fake confirmation.
+});
+
+
+// borrowing/adjusting my searchbar code from previous photogallery project:
+// https://tdgcardwell.github.io/Project-5_Interactive-Photo-Gallery/
+
+// get the information to search - probably would be an array from the app in "real life" - so I guess for now I'll just build one. Could probably be combined with the 'new members' array, but unnecessary right now.
+
+let users = ['Victoria Chambers', 'Algernon Fudginton', 'Juliet Montague', 'Sven Hasselbläd', 'Kris Kringle'];
+
+
+// function
+function captionSearch() {
+
+  // get input from search bar value
+  let searchString = document.getElementById('searchbar').value
+
+  // convert to lower case, so that search is not case sensitive
+  searchString=searchString.toLowerCase();
+
+  // FOR each user
+  for (i = 0; i < users.length; i++) {
+
+    // IF searchString to lowercase is NOT included
+    if (users[i].toLowerCase().includes(searchString)) {
+
+      console.log(users[i]);
+
+      // set to display none
+      // images[i].style.display="none";
+
+    // ELSE
+    // }else {
+
+      // display as normal
+      // images[i].style.display="block";
+
+    //ENDIF
+  // ENDFOR
+// end function
+    }
+  }
+}
+
+
+// Add the function to the searchbar
+// <input type="text" oninput="captionSearch()" name="search" placeholder="Search" id="searchbar" class="search">
+
+let searchForUser = $('#searchbar');
+
+// when something changes (ie something is typed, or deleted), run the function.
+searchForUser.change(captionSearch());
