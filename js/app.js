@@ -238,6 +238,8 @@ let searchBar = $("#searchbar");
 let messageBox = $("#messagebox");
 let sendButton = $('#sendButton');
 
+let messageSection = $('#message')
+let replaceReset = messageSection.html();
 
 // autocomplete
 // ------------------------------------------
@@ -250,11 +252,38 @@ searchBar.autocomplete({
 
 
 function writeMessage() {
-  // collect what we are sending, and who we are sending it to.
+  // collect what we are sending, and who we are sending it to (needs to be defined in here.)
   let toWhom = searchBar.val();
   let message = messageBox.val();
-  console.log(toWhom);
-  console.log(message);
+
+
+  // this needs to be defined in here to.
+  function sendTheMessage() {
+    console.log(toWhom);
+    console.log(message);
+    // in real life send the message, for now display a fake confirmation.
+    // maybe absolute position something over the space? for now, just an alert?
+    alert('Your message was sent to ' + document.querySelector("#searchbar").value);
+    // apparently the alert part doesn't like JQuery? Good to know...
+  }
+
+
+
+  if (toWhom == '') {
+    alert('Hold up, who do you want to send this to?');
+  } else if (message == '')
+  {
+    // alert('Do you really want to send a blank message?');
+    if (confirm('Do you really want to send a blank message?') == true){
+      sendTheMessage();
+      clearMessage();
+    }
+
+  } else
+  {
+    sendTheMessage();
+    clearMessage();
+  }
 }
 
 function clearMessage() {
@@ -262,11 +291,9 @@ function clearMessage() {
   messageBox.val("");
 }
 
-// "send" the message
+// "send" the message when the button is clicked.
 // ------------------------------------------
 sendButton.click(function() {
   event.preventDefault();
   writeMessage();
-  // in real life send the message, for now display a fake confirmation.
-  clearMessage();
 });
