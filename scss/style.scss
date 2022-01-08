@@ -239,6 +239,33 @@ header h2 {
   font-size: .7rem;
 }
 
+// ========= Carousel stuff ==========================
+
+.carousel-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0;
+
+  input {
+    display: none;
+  }
+
+  label {
+    transition: .5s;
+    padding: .25rem 1rem;
+    border-radius: 16px;
+  }
+
+  input:checked + label {
+    background-color: #81c98f;
+    color: #f7f7f7;
+  }
+
+}
+
+
 input[type='text'],
 textarea,
 button,
