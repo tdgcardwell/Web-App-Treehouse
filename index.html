@@ -110,7 +110,7 @@
         <div class="carousel-holder">
           <div id="hourlyChart">
             <canvas id="myChart">
-                <!-- Fallback / screen reder content -->
+                <!-- Fallback / screen reader content -->
                 <p>Text Here should not be displayed</p>
 
                 <script>
@@ -180,15 +180,168 @@
           </div>
 
           <div id="dailyChart">
-            Text
+            <canvas id="myChartD">
+                <!-- Fallback / screen reader content -->
+                <p>Text Here should not be displayed</p>
+
+                <script>
+
+                const labelsD = [
+                  'Sun',
+                  'M',
+                  'T',
+                  'W',
+                  'Th',
+                  'F',
+                  'Sat',
+                ];
+                const dataD = {
+                  labels: labelsD,
+                  datasets: [{
+                    label: 'Daily',
+                    backgroundColor: 'rgb(117 119 191 / 52%)',
+                    borderColor: '#4d4c72',
+                    fill: true,
+                    data: [1000, 2000, 2300, 3000, 2500, 3200, 1800],
+                  }]
+                };
+
+                const configD = {
+                  type: 'line',
+                  data: dataD,
+                  options: {
+                    elements: {
+                      line: {
+                        borderWidth: 0,
+                        tension: (.17,.67,.83,.67)
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        display: false
+                      }
+                    }
+                  }
+                };
+
+                const myChartD = new Chart(
+                    document.getElementById('myChartD'),
+                    configD
+                  );
+
+                </script>
+              </canvas>
           </div>
 
           <div id="weeklyChart">
-            Text
+            <canvas id="myChartW">
+                <!-- Fallback / screen reader content -->
+                <p>Text Here should not be displayed</p>
+
+                <script>
+
+                const labelsW = [
+                  'Week One',
+                  'Week Two',
+                  'Week Three',
+                  'Week Four',
+                  'Week Five',
+                ];
+                const dataW = {
+                  labels: labelsW,
+                  datasets: [{
+                    label: 'Weekly',
+                    backgroundColor: 'rgb(117 119 191 / 52%)',
+                    borderColor: '#4d4c72',
+                    fill: true,
+                    data: [15600, 20000, 18000, 20500, 13200],
+                  }]
+                };
+
+                const configW = {
+                  type: 'line',
+                  data: dataW,
+                  options: {
+                    elements: {
+                      line: {
+                        borderWidth: 0,
+                        tension: (.17,.67,.83,.67)
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        display: false
+                      }
+                    }
+                  }
+                };
+
+                const myChartW = new Chart(
+                    document.getElementById('myChartW'),
+                    configW
+                  );
+
+                </script>
+              </canvas>
           </div>
 
           <div id="monthlyChart">
-            Text
+            <canvas id="myChartM">
+                <!-- Fallback / screen reader content -->
+                <p>Text Here should not be displayed</p>
+
+                <script>
+
+                const labelsM = [
+                  'Jan',
+                  'Feb',
+                  'Mar',
+                  'Apr',
+                  'May',
+                  'June',
+                  'July',
+                  'Aug',
+                  'Sept',
+                  'Oct',
+                  'Nov',
+                  'Dec',
+                ];
+                const dataM = {
+                  labels: labelsM,
+                  datasets: [{
+                    label: 'Monthly',
+                    backgroundColor: 'rgb(117 119 191 / 52%)',
+                    borderColor: '#4d4c72',
+                    fill: true,
+                    data: [91230, 90749, 89240, 93060, 88910, 95602, 99090, 99402, 97030, 96620, 97055, 89723],
+                  }]
+                };
+
+                const configM = {
+                  type: 'line',
+                  data: dataM,
+                  options: {
+                    elements: {
+                      line: {
+                        borderWidth: 0,
+                        tension: (.17,.67,.83,.67)
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        display: false
+                      }
+                    }
+                  }
+                };
+
+                const myChartM = new Chart(
+                    document.getElementById('myChartM'),
+                    configM
+                  );
+
+                </script>
+              </canvas>
           </div>
 
         </div>
@@ -207,40 +360,40 @@
               <script>
 
               const labels1 = [
-  'S',
-  'M',
-  'T',
-  'W',
-  'Th',
-  'F',
-  'S'
-];
-const data1 = {
-  labels: labels1,
-  datasets: [{
-    label: 'Butts',
-    backgroundColor: '#7577bf',
-    borderColor: '#4d4c72',
-    data: [75, 125, 175, 125, 225, 200, 100],
-  }]
-};
+                'S',
+                'M',
+                'T',
+                'W',
+                'Th',
+                'F',
+                'S'
+              ];
+              const data1 = {
+                labels: labels1,
+                datasets: [{
+                  label: 'Butts',
+                  backgroundColor: '#7577bf',
+                  borderColor: '#4d4c72',
+                  data: [75, 125, 175, 125, 225, 200, 100],
+                }]
+              };
 
-const config1 = {
-  type: 'bar',
-  data: data1,
-  options: {
-    plugins: {
-      legend: {
-        display: false
-      }
-    }
-  }
-};
+              const config1 = {
+                type: 'bar',
+                data: data1,
+                options: {
+                  plugins: {
+                    legend: {
+                      display: false
+                    }
+                  }
+                }
+              };
 
-const dailyTraffic = new Chart(
-    document.getElementById('dailyTraffic'),
-    config1
-  );
+              const dailyTraffic = new Chart(
+                  document.getElementById('dailyTraffic'),
+                  config1
+                );
 
 
               </script>
@@ -258,41 +411,41 @@ const dailyTraffic = new Chart(
               <script>
 
               const devices = [
-  'Desktop',
-  'Tablet',
-  'Phone'
-];
-const userdata = {
-  labels: devices,
-  datasets: [{
-    label: 'Butts',
-    backgroundColor: ['#7577bf', '#81c98f', '#58b6c8'],
-    // borderColor: '['#7577bf', '#81c98f', '#58b6c8'],
-    data: [60, 25, 15],
-  }]
-};
+                'Desktop',
+                'Tablet',
+                'Phone'
+              ];
+              const userdata = {
+                labels: devices,
+                datasets: [{
+                  label: 'Butts',
+                  backgroundColor: ['#7577bf', '#81c98f', '#58b6c8'],
+                  // borderColor: '['#7577bf', '#81c98f', '#58b6c8'],
+                  data: [60, 25, 15],
+                }]
+              };
 
-const config2 = {
-  type: 'doughnut',
-  data: userdata,
-  options: {
-    elements: {
-      arc: {
-        borderWidth: 0
-      }
-    },
-    plugins: {
-      legend: {
-        position: 'right'
-      }
-    }
-  }
-};
+              const config2 = {
+                type: 'doughnut',
+                data: userdata,
+                options: {
+                  elements: {
+                    arc: {
+                      borderWidth: 0
+                    }
+                  },
+                  plugins: {
+                    legend: {
+                      position: 'right'
+                    }
+                  }
+                }
+              };
 
-const mobileUsers = new Chart(
-    document.getElementById('mobileUsers'),
-    config2
-  );
+              const mobileUsers = new Chart(
+                  document.getElementById('mobileUsers'),
+                  config2
+                );
 
 
               </script>

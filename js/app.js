@@ -67,12 +67,15 @@ function showChart() {
 
       let scaleLevel = carouselNavButtons[i]["value"];
       let selectedChart = $(`#${scaleLevel}Chart`);
-      selectedChart.fadeToggle(500);
+      selectedChart.slideToggle(500);
     }
   }
 }
 
 showChart();
+
+let targetArea = $(".carousel-nav");
+targetArea.click(showChart);
 
 
 
