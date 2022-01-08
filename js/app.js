@@ -54,6 +54,32 @@ $('.bell').click(function(){
 
 /*
 ======================================================
+Carousel (That isn't really a Carousel)
+======================================================
+*/
+
+function showChart() {
+  let carouselNavButtons = $(".carousel-nav input");
+
+  for (let i=0; i<carouselNavButtons.length; i++) {
+
+    if (carouselNavButtons[i]["checked"]){
+
+      let scaleLevel = carouselNavButtons[i]["value"];
+      let selectedChart = $(`#${scaleLevel}Chart`);
+      selectedChart.fadeToggle(500);
+    }
+  }
+}
+
+showChart();
+
+
+
+
+
+/*
+======================================================
 New Members
 ======================================================
 */
