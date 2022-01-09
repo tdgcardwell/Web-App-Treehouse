@@ -346,7 +346,8 @@ section:last-child {
   margin:auto;
 }
 
-.new-member {
+.new-member,
+.activity {
   @include tablet-and-wider {
     display: flex;
     align-items: center;
@@ -361,6 +362,15 @@ section:last-child {
       margin-left: auto;
     }
 
+  }
+}
+
+.activity::after {
+  @include tablet-and-wider {
+    content: ">";
+    margin-left: auto;
+    color: $color2;
+    font-size: 1.5rem;
   }
 }
 

@@ -41,6 +41,10 @@
   transition: .5s;
 }
 
+.slider::after {
+  
+}
+
 input:checked + .slider {
   background-color: $color1;
 }
