@@ -12,4 +12,3 @@
   - [X] social widgets
   - [x] logo
   - [X] radio buttons for traffic + pointers
-- [x] lose "butts" in graph
