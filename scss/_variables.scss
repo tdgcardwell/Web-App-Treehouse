@@ -4,6 +4,9 @@ $color2 : #4d4c72;
 $color3 : #81c98f;
 $color4 : #58b6c8;
 
+$subtle1: lighten($color2, 50%);
+$subtle2: lighten($color3, 25%);
+
 $lightgrey : #f7f7f7;
 $midgrey: #cccccc;
 $darkgrey: #999a9a;

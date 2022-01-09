@@ -1,0 +1,17 @@
+@keyframes twist {
+  from {
+    transform: rotate(0) scale(1);
+  }
+
+  25% {
+    transform: rotate(15deg) scale(1.25);
+  }
+
+  75% {
+    transform: rotate(-15deg) scale(1.25);
+  }
+
+  to {
+    transform: rotate(0) scale(1);
+  }
+}
