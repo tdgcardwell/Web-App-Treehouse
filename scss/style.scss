@@ -160,10 +160,17 @@ header {
 .avatar {
   border-radius: 50%;
   height: 6em;
+  width: 6em;
+
+  @include tablet-and-wider {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 .id-badge .avatar {
   height: 3em;
+  width: 3em;
 }
 
 h1, h2, h3 {
@@ -190,11 +197,44 @@ section,
 .new-member,
 .activity {
   padding: 1rem;
-  border-bottom: 1px solid $midgrey;
   text-align: center;
 
   .email {
     color: $color1;
+  }
+}
+
+section,
+.new-member,
+.activity,
+.secondary-graphs {
+  border-bottom: 1px solid $midgrey;
+}
+
+.secondary-graphs {
+  @include tablet-and-wider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & section:first-child {
+      border: none;
+      border-right: 1px solid $midgrey;
+    }
+
+  }
+}
+
+#dailyTraffic {
+  @include tablet-and-wider {
+    margin-top: 26%;
+  }
+}
+
+.socialStats {
+  @include tablet-and-wider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
   }
 }
 
@@ -247,6 +287,13 @@ h4 {
   border-right: none;
 }
 
+.traffic-header {
+  @include tablet-and-wider {
+    display: flex;
+    align-items: center;
+  }
+}
+
 section:last-child {
   border: none;
   margin-bottom: 1.5rem;
@@ -278,11 +325,15 @@ section:last-child {
     font-weight: 300;
     color: $darkgrey;
     margin: 0;
+
+    @include tablet-and-wider {
+      font-size: 1.5rem;
+    }
+
   }
 
   .avatar {
     background-color: $color1;
-    width: 6em;
     margin: 0;
     display: flex;
   }
@@ -295,12 +346,33 @@ section:last-child {
   margin:auto;
 }
 
+.new-member {
+  @include tablet-and-wider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+
+    div {
+      margin-left: 1.5rem;
+    }
+
+    .date {
+      margin-left: auto;
+    }
+
+  }
+}
 
 
 section h3 {
   text-transform: uppercase;
   text-align: left;
   font-weight: 600;
+
+  @include tablet-and-wider {
+    margin-right: auto;
+  }
 }
 
 .navicon {

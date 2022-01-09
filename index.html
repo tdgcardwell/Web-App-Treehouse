@@ -89,22 +89,24 @@
       </div>
 
       <section id="traffic">
-        <h3>traffic</h3>
+        <div class="traffic-header">
+          <h3>traffic</h3>
 
-        <div class="carousel-nav">
+          <div class="carousel-nav">
 
-          <input id="hourly" type="radio" name="traffic" value="hourly" checked>
-          <label for="hourly">Hourly</label>
+            <input id="hourly" type="radio" name="traffic" value="hourly" checked>
+            <label for="hourly">Hourly</label>
 
-          <input id="daily" type="radio" name="traffic" value="daily">
-          <label for="daily">Daily</label>
+            <input id="daily" type="radio" name="traffic" value="daily">
+            <label for="daily">Daily</label>
 
-          <input id="weekly" type="radio" name="traffic" value="weekly">
-          <label for="weekly">Weekly</label>
+            <input id="weekly" type="radio" name="traffic" value="weekly">
+            <label for="weekly">Weekly</label>
 
-          <input id="monthly" type="radio" name="traffic" value="monthly">
-          <label for="monthly">Monthly</label>
+            <input id="monthly" type="radio" name="traffic" value="monthly">
+            <label for="monthly">Monthly</label>
 
+          </div>
         </div>
 
         <div class="carousel-holder">
@@ -350,147 +352,151 @@
 
       </section>
 
-      <section id="daily-traffic">
-        <h3>daily traffic</h3>
-        <div>
-          <canvas id="dailyTraffic">
-              <!-- Fallback / screen reder content -->
-              <p>Text Here should not be displayed</p>
+      <div class="secondary-graphs">
+        <section id="daily-traffic">
+          <h3>daily traffic</h3>
+          <div>
+            <canvas id="dailyTraffic">
+                <!-- Fallback / screen reder content -->
+                <p>Text Here should not be displayed</p>
 
-              <script>
+                <script>
 
-              const labels1 = [
-                'S',
-                'M',
-                'T',
-                'W',
-                'Th',
-                'F',
-                'S'
-              ];
-              const data1 = {
-                labels: labels1,
-                datasets: [{
-                  label: 'Butts',
-                  backgroundColor: '#7577bf',
-                  borderColor: '#4d4c72',
-                  data: [75, 125, 175, 125, 225, 200, 100],
-                }]
-              };
+                const labels1 = [
+                  'S',
+                  'M',
+                  'T',
+                  'W',
+                  'Th',
+                  'F',
+                  'S'
+                ];
+                const data1 = {
+                  labels: labels1,
+                  datasets: [{
+                    label: 'Butts',
+                    backgroundColor: '#7577bf',
+                    borderColor: '#4d4c72',
+                    data: [75, 125, 175, 125, 225, 200, 100],
+                  }]
+                };
 
-              const config1 = {
-                type: 'bar',
-                data: data1,
-                options: {
-                  plugins: {
-                    legend: {
-                      display: false
+                const config1 = {
+                  type: 'bar',
+                  data: data1,
+                  options: {
+                    plugins: {
+                      legend: {
+                        display: false
+                      }
                     }
                   }
-                }
-              };
+                };
 
-              const dailyTraffic = new Chart(
-                  document.getElementById('dailyTraffic'),
-                  config1
-                );
+                const dailyTraffic = new Chart(
+                    document.getElementById('dailyTraffic'),
+                    config1
+                  );
 
 
-              </script>
-            </canvas>
-        </div>
-      </section>
+                </script>
+              </canvas>
+          </div>
+        </section>
 
-      <section id="mobile-users">
-        <h3>mobile users</h3>
-        <div>
-          <canvas id="mobileUsers">
-              <!-- Fallback / screen reder content -->
-              <p>Number of mobile users</p>
+        <section id="mobile-users">
+          <h3>mobile users</h3>
+          <div>
+            <canvas id="mobileUsers">
+                <!-- Fallback / screen reder content -->
+                <p>Number of mobile users</p>
 
-              <script>
+                <script>
 
-              const devices = [
-                'Desktop',
-                'Tablet',
-                'Phone'
-              ];
-              const userdata = {
-                labels: devices,
-                datasets: [{
-                  label: 'Butts',
-                  backgroundColor: ['#7577bf', '#81c98f', '#58b6c8'],
-                  // borderColor: '['#7577bf', '#81c98f', '#58b6c8'],
-                  data: [60, 25, 15],
-                }]
-              };
+                const devices = [
+                  'Desktop',
+                  'Tablet',
+                  'Phone'
+                ];
+                const userdata = {
+                  labels: devices,
+                  datasets: [{
+                    label: 'Butts',
+                    backgroundColor: ['#7577bf', '#81c98f', '#58b6c8'],
+                    // borderColor: '['#7577bf', '#81c98f', '#58b6c8'],
+                    data: [60, 25, 15],
+                  }]
+                };
 
-              const config2 = {
-                type: 'doughnut',
-                data: userdata,
-                options: {
-                  elements: {
-                    arc: {
-                      borderWidth: 0
-                    }
-                  },
-                  plugins: {
-                    legend: {
-                      position: 'right'
+                const config2 = {
+                  type: 'doughnut',
+                  data: userdata,
+                  options: {
+                    elements: {
+                      arc: {
+                        borderWidth: 0
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        position: 'right'
+                      }
                     }
                   }
-                }
-              };
+                };
 
-              const mobileUsers = new Chart(
-                  document.getElementById('mobileUsers'),
-                  config2
-                );
+                const mobileUsers = new Chart(
+                    document.getElementById('mobileUsers'),
+                    config2
+                  );
 
 
-              </script>
-            </canvas>
-        </div>
-      </section>
+                </script>
+              </canvas>
+          </div>
+        </section>
+      </div>
 
       <section id="social-stats">
         <h3>Social Stats</h3>
-
-        <div class="social-badge">
-          <div class="avatar">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/>
-            </svg>
+        <div class="socialStats">
+          <div class="social-badge">
+            <div class="avatar">
+              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/>
+              </svg>
+            </div>
+            <div class="">
+              <h4>Facebook</h4>
+              <p>10,320</p>
+            </div>
           </div>
-          <div class="">
-            <h4>Facebook</h4>
-            <p>10,320</p>
+          <div class="social-badge">
+            <div class="avatar">
+              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0C8.74 0 8.33.01 7.05.07a8.85 8.85 0 0 0-2.91.56c-.79.3-1.46.72-2.13 1.38S.94 3.35.63 4.14c-.3.77-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.87 5.87 0 0 0 2.13 1.38c.77.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07a8.88 8.88 0 0 0 2.91-.56 5.9 5.9 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.77.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95a8.87 8.87 0 0 0-.56-2.91 5.89 5.89 0 0 0-1.38-2.13A5.85 5.85 0 0 0 19.86.63c-.77-.3-1.64-.5-2.91-.56A83.63 83.63 0 0 0 12 0zm0 2.16c3.2 0 3.58.02 4.85.07 1.17.06 1.8.25 2.23.42.56.21.96.47 1.38.9.42.41.68.81.9 1.37.16.43.36 1.06.4 2.23.07 1.27.08 1.65.08 4.85s-.02 3.58-.08 4.85a6.75 6.75 0 0 1-.42 2.23 3.81 3.81 0 0 1-.9 1.38 3.74 3.74 0 0 1-1.38.9 6.5 6.5 0 0 1-2.23.4c-1.27.07-1.65.08-4.86.08-3.21 0-3.59-.02-4.86-.08a6.8 6.8 0 0 1-2.23-.42 3.72 3.72 0 0 1-1.38-.9 3.64 3.64 0 0 1-.9-1.38 6.81 6.81 0 0 1-.42-2.23 96.23 96.23 0 0 1-.06-4.84c0-3.2.01-3.6.06-4.87A6.8 6.8 0 0 1 2.6 4.9c.2-.57.48-.96.9-1.38.42-.42.8-.69 1.38-.9A6.64 6.64 0 0 1 7.1 2.2c1.27-.04 1.65-.06 4.86-.06l.04.03zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 1 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+              </svg>
+            </div>
+            <div class="">
+              <h4>Instagram</h4>
+              <p>16,445</p>
+            </div>
+
+          </div>
+          <div class="social-badge">
+            <div class="avatar">
+              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.95 4.57a10 10 0 0 1-2.82.77 4.96 4.96 0 0 0 2.16-2.72c-.95.56-2 .96-3.12 1.19a4.92 4.92 0 0 0-8.39 4.48A13.93 13.93 0 0 1 1.64 3.16a4.82 4.82 0 0 0-.67 2.48c0 1.7.87 3.2 2.2 4.1a4.9 4.9 0 0 1-2.24-.62v.06A4.92 4.92 0 0 0 4.88 14a5 5 0 0 1-2.21.09 4.94 4.94 0 0 0 4.6 3.42 9.87 9.87 0 0 1-6.1 2.1c-.39 0-.78-.02-1.17-.07a14 14 0 0 0 7.56 2.21c9.05 0 14-7.5 14-13.98 0-.21 0-.42-.02-.63A9.94 9.94 0 0 0 24 4.59l-.05-.02z"/>
+              </svg>
+            </div>
+            <div class="">
+              <h4>Twitter</h4>
+              <p>22,189</p>
+            </div>
+
           </div>
         </div>
-        <div class="social-badge">
-          <div class="avatar">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M12 0C8.74 0 8.33.01 7.05.07a8.85 8.85 0 0 0-2.91.56c-.79.3-1.46.72-2.13 1.38S.94 3.35.63 4.14c-.3.77-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.88 5.88 0 0 0 1.38 2.13 5.87 5.87 0 0 0 2.13 1.38c.77.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07a8.88 8.88 0 0 0 2.91-.56 5.9 5.9 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.77.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95a8.87 8.87 0 0 0-.56-2.91 5.89 5.89 0 0 0-1.38-2.13A5.85 5.85 0 0 0 19.86.63c-.77-.3-1.64-.5-2.91-.56A83.63 83.63 0 0 0 12 0zm0 2.16c3.2 0 3.58.02 4.85.07 1.17.06 1.8.25 2.23.42.56.21.96.47 1.38.9.42.41.68.81.9 1.37.16.43.36 1.06.4 2.23.07 1.27.08 1.65.08 4.85s-.02 3.58-.08 4.85a6.75 6.75 0 0 1-.42 2.23 3.81 3.81 0 0 1-.9 1.38 3.74 3.74 0 0 1-1.38.9 6.5 6.5 0 0 1-2.23.4c-1.27.07-1.65.08-4.86.08-3.21 0-3.59-.02-4.86-.08a6.8 6.8 0 0 1-2.23-.42 3.72 3.72 0 0 1-1.38-.9 3.64 3.64 0 0 1-.9-1.38 6.81 6.81 0 0 1-.42-2.23 96.23 96.23 0 0 1-.06-4.84c0-3.2.01-3.6.06-4.87A6.8 6.8 0 0 1 2.6 4.9c.2-.57.48-.96.9-1.38.42-.42.8-.69 1.38-.9A6.64 6.64 0 0 1 7.1 2.2c1.27-.04 1.65-.06 4.86-.06l.04.03zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 1 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
-            </svg>
-          </div>
-          <div class="">
-            <h4>Instagram</h4>
-            <p>16,445</p>
-          </div>
 
-        </div>
-        <div class="social-badge">
-          <div class="avatar">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M23.95 4.57a10 10 0 0 1-2.82.77 4.96 4.96 0 0 0 2.16-2.72c-.95.56-2 .96-3.12 1.19a4.92 4.92 0 0 0-8.39 4.48A13.93 13.93 0 0 1 1.64 3.16a4.82 4.82 0 0 0-.67 2.48c0 1.7.87 3.2 2.2 4.1a4.9 4.9 0 0 1-2.24-.62v.06A4.92 4.92 0 0 0 4.88 14a5 5 0 0 1-2.21.09 4.94 4.94 0 0 0 4.6 3.42 9.87 9.87 0 0 1-6.1 2.1c-.39 0-.78-.02-1.17-.07a14 14 0 0 0 7.56 2.21c9.05 0 14-7.5 14-13.98 0-.21 0-.42-.02-.63A9.94 9.94 0 0 0 24 4.59l-.05-.02z"/>
-            </svg>
-          </div>
-          <div class="">
-            <h4>Twitter</h4>
-            <p>22,189</p>
-          </div>
-
-        </div>
       </section>
 
       <section id="new-members">

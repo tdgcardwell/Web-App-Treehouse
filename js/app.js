@@ -112,7 +112,7 @@ let membersToInsert = "";
 
 // loop through each, building info
 for (let i=0; i<newMembers.length; i++) {
-  let eachOne = `<div class="new-member"><img class="avatar" src="imgs/members/member-${newMembers[i]["number"]}.jpg" alt='${newMembers[i]["name"]}'><h4>${newMembers[i]["name"]}</h4><span class="email">${newMembers[i]["email"]}</span><br/><span class="date">${newMembers[i]["joinDate"]}</span></div>`;
+  let eachOne = `<div class="new-member"><img class="avatar" src="imgs/members/member-${newMembers[i]["number"]}.jpg" alt='${newMembers[i]["name"]}'><div><h4>${newMembers[i]["name"]}</h4><span class="email">${newMembers[i]["email"]}</span></div><span class="date">${newMembers[i]["joinDate"]}</span></div>`;
   membersToInsert += eachOne;
 }
 
