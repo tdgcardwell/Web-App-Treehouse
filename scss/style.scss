@@ -90,6 +90,7 @@ main {
     left: 68px;
     background-color: #fff;
     box-shadow: rgba(77, 76, 114, .5) 0 10px 20px 4px;
+    width: calc(100% - 68px);
     z-index: 1;
   }
 }
