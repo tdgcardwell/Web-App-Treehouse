@@ -40,8 +40,11 @@ nav {
 }
 
 main {
+  margin-bottom: 1.5rem;
+
   @include tablet-and-wider {
     grid-area: main;
+    margin-bottom: 0;
   }
 }
 
@@ -92,6 +95,13 @@ main {
     box-shadow: rgba(77, 76, 114, .5) 0 10px 20px 4px;
     width: calc(100% - 68px);
     z-index: 1;
+  }
+
+  @include desktop-and-wider {
+    top: 90px;
+    right: 0px;
+    left: auto;
+    width: 50%;
   }
 }
 
@@ -296,7 +306,6 @@ h4 {
 
 section:last-child {
   border: none;
-  margin-bottom: 1.5rem;
 }
 
 .social-badge {
@@ -424,7 +433,15 @@ header h2 {
 .carousel-holder div {
   display: none;
 }
+// -------------
 
+#settings {
+  @include desktop-and-wider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 
 input[type='text'],
 textarea,
@@ -460,6 +477,23 @@ button {
   text-transform: uppercase;
 }
 
+.switches {
+  @include tablet-and-wider {
+    width: 50%;
+  }
+
+  @include desktop-and-wider {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    .switch {
+      margin-bottom: auto;
+    }
+
+  }
+}
+
 .leave-room-for-jesus {
     // this class name is purely to entertain myself, and remind me what it does.
     // the other option was to call it ".dont-stand-so-close-to-me"...
@@ -476,4 +510,20 @@ button {
 .share-space {
   display: flex;
   gap: 1rem;
+}
+
+.additional {
+  @include desktop-and-wider {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    section:nth-child(odd) {
+      border-right: 1px solid $midgrey;
+    }
+
+    #message {
+      border-bottom: none;
+    }
+
+  }
 }

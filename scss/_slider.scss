@@ -1,9 +1,9 @@
-// Borrowed' / 'inspired by' https://www.w3schools.com/howto/howto_css_switch.asp and then I changed the styling to match the mock-up.
+// Inspired by www.w3schools.com/howto/howto_css_switch.asp and then I changed the styling to match the mock-up.
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 90px;
   height: 34px;
 }
 
@@ -26,7 +26,7 @@
   transition: .5s;
 }
 
-// I understand that this is the part that is the 'toggle' that slides across.
+// to confirm: I understand that this is the part that is the 'toggle' that slides across.
 .slider:before {
   position: absolute;
   content: "";
@@ -41,10 +41,17 @@
   transition: .5s;
 }
 
+// and here's where I added the writing.
 .slider::after {
-  
+  content: "OFF";
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: $darkgrey;
+  transition: .7s;
 }
 
+// color changing
 input:checked + .slider {
   background-color: $color1;
 }
@@ -55,9 +62,18 @@ input:focus + .slider {
 
 // I understand that this is the part making the movement happen when the box is checked.
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+// similarly - this changes the writing
+input:checked + .slider::after {
+  content: "ON";
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  color: #fff;
 }
 
 /* Rounded sliders */
