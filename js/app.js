@@ -172,10 +172,10 @@ if (localStorage.length > 0) {
   storedSettings = JSON.parse(localStorage.getItem('locallyStored'));
   console.log('settings retrieved');
 } else {
-  // otherwise default to true for both, and 0 for timezone
+  // otherwise default to false for both, and 0 for timezone
   storedSettings = {
-    emailNotifications : true,
-    setProfileToPublic : true,
+    emailNotifications : false,
+    setProfileToPublic : false,
     timeZone: 0
   };
 }
@@ -254,6 +254,17 @@ let cancelButton = $('#cancelButton')
 cancelButton.click(function() {
   event.preventDefault();
   localStorage.clear()
+
+  // reset the sliders
+  emailNotifications.prop("checked", false);
+  setProfileToPublic.prop("checked", false);
+
+  // reset the menu
+  // we want to filter by timeZoneId
+  let zoneReset = $('#time_zones option').filter('[timeZoneId ="0"]');
+  // then we want to give that one the property 'selected'
+  zoneReset.prop("selected", true);
+  console.log('settings reset');
   alert('settings reset');
 });
 
